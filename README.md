@@ -7,6 +7,7 @@ Example VueX application crud frontend
 NodeJS have been Installed
 
 **Install VueCLI**
+
 ```bash
 npm install -g @vue/cli
 ```
@@ -15,7 +16,7 @@ npm install -g @vue/cli
 
 **create project in current dir**
 
-then select > Default (Vue 3) ([Vue 3] babel, eslint) 
+then select > Default (Vue 3) ([Vue 3] babel, eslint)
 
 ```bash
 vue create .
@@ -23,32 +24,32 @@ vue create .
 ? Generate project in current directory? (Y/n) Y
 
 Vue CLI v4.5.15
-? Please pick a preset: 
+? Please pick a preset:
 > Manually select features
 
-? Check the features needed for your project: 
+? Check the features needed for your project:
  (*) Choose Vue version
- (*) Babel      
+ (*) Babel
  (*) Router
  (*) Vuex
  (*) Linter / Formatter
  (*) Unit Testing
-  
-? Choose a version of Vue.js that you want to start the project with 
+
+? Choose a version of Vue.js that you want to start the project with
 > 3.x
 
 ? Use history mode for router? (Requires proper server setup for index fallback in production) (Y/n)
 
-? Pick a linter / formatter config: 
-> ESLint with error prevention only 
+? Pick a linter / formatter config:
+> ESLint with error prevention only
 
 ? Pick additional lint features: (Press <space> to select, <a> to toggle all, <i> to invert selection)
 >(*) Lint on save
 
-? Pick a unit testing solution: 
+? Pick a unit testing solution:
 > Jest
 
-? Where do you prefer placing config for Babel, ESLint, etc.? 
+? Where do you prefer placing config for Babel, ESLint, etc.?
 > In package.json
 
 ? Save this as a preset for future projects? (y/N) y
@@ -67,6 +68,7 @@ npm install axios
 app running on port :8080
 
 **run on development**
+
 ```bash
 npm run serve
 ```
@@ -74,6 +76,7 @@ npm run serve
 ## Build
 
 **build on production**
+
 ```bash
 npm run build
 ```
@@ -81,11 +84,13 @@ npm run build
 ## Unittest
 
 **Jest**
+
 ```bash
 npm run test:unit
 ```
 
 jest config coverage report **package.json**
+
 ```json
 {
   "jest": {
@@ -94,10 +99,7 @@ jest config coverage report **package.json**
       "^.+\\.vue$": "vue-jest"
     },
     "collectCoverage": true,
-    "collectCoverageFrom": [
-      "src/**/*.{js,vue}",
-      "!src/main.js"
-    ]
+    "collectCoverageFrom": ["src/**/*.{js,vue}", "!src/main.js"]
   }
 }
 ```
@@ -105,7 +107,7 @@ jest config coverage report **package.json**
 ## Configurations
 
 set backend api
+
 ```
 VUE_APP_ENPOINT_API_BACKEND=http://localhost:8089/api
 ```
-
