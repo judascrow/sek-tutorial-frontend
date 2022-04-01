@@ -7,7 +7,7 @@ for file in $ROOT_DIR/js/app.*.js* $ROOT_DIR/index.html $ROOT_DIR/js/chunk-*.js;
 do
   echo "Processing $file ..."
 
-  sed -i 's|'${VUE_APP_ENPOINT_API_BACKEND}'|g' $file
+  sed -i 's|http://localhost:8089/api|'${VUE_APP_ENPOINT_API_BACKEND}'|g' $file
 
 done
 
