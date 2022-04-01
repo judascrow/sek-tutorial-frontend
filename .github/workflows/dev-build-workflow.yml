@@ -118,10 +118,10 @@ jobs:
       - name: Push image
         run: docker image push ${{ env.CONTAINER_REPOSITORY }}/${{ env.APP_NAME }}:${{env.IMAGE_TAG}}
 
-      # - name: Repository Dispatchcd
-      #   uses: peter-evans/repository-dispatch@v1
-      #   with:
-      #     token: ${{ secrets.REPO_ACCESS_TOKEN }}
-      #     repository: judascrow/sek-tutorial-pipeline
-      #     event-type: sek-tutorial-frontend-cd-dev
-      #     client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}'
+      - name: Repository Dispatchcd
+        uses: peter-evans/repository-dispatch@v1
+        with:
+          token: ${{ secrets.REPO_ACCESS_TOKEN }}
+          repository: judascrow/sek-tutorial-pipeline
+          event-type: sek-tutorial-frontend-cd-dev
+          client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}'
