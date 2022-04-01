@@ -15,3 +15,7 @@ COPY --from=build-stage /app/entrypoint.sh /usr/share/nginx/html
 EXPOSE 80
 
 COPY ./entrypoint.sh /entrypoint.sh
+
+# Grant Linux permissions and run entrypoint script
+RUN chmod +x /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
